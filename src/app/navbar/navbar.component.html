@@ -1,0 +1,63 @@
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="">
+        <div class=" bg-white flex  ">
+            <img src="../../assets/img/freshcart-logo.svg" class="py-2 px-2" alt="freshcart Logo" />
+
+            @if(showlink){
+            <a routerLink="Home" class="py-2 px-2  border-b-4 font-semibold">Home</a>
+            <a routerLink="cart" class="py-2 px-2 text-gray-500 font-semibold ">Cart</a>
+            <a routerLink="wishlist" class="py-2 px-2 text-gray-500 font-semibold ">Wish List</a>
+            <a routerLink="products" class="py-2 px-2 text-gray-500 font-semibold ">Products</a>
+            <a routerLink="categories" class="py-2 px-2 text-gray-500 font-semibold ">Categories</a>
+            <a routerLink="brands" class="py-2 px-2 text-gray-500 font-semibold ">Brands</a>}
+        </div>
+        <div class=" bg-white flex  justify-end" id="navbar-default2">
+            <ul class=" flex space-x ">
+                <li>
+                    <i class="fa fa-instagram  px-2" aria-hidden="true"></i>
+                </li>
+                <li>
+                    <i class="fa fa-facebook  px-2" aria-hidden="true"></i>
+                </li>
+                <li>
+                    <i class="fa fa-telegram  px-2" aria-hidden="true"></i>
+                </li>
+                <li>
+                    <i class="fa fa-twitter  px-2" aria-hidden="true"></i>
+                </li>
+                <li>
+                    <i class="fa fa-linkedin  px-2" aria-hidden="true"></i>
+                </li>
+                <li>
+                    <i class="fa fa-youtube  px-2" aria-hidden="true"></i>
+                </li>
+
+
+
+                @if(showlink) {}
+                @else{
+                <li>
+                    <a class="px-2 text-gray-500 font-semibold" routerLink="register"
+                        routerLinkActive="bg-main">Register</a>
+                </li>
+                <li>
+                    <a class="px-2 text-gray-500 font-semibold" routerLink="login" routerLinkActive="bg-main">Login</a>
+                </li>
+                }
+                @if(showlink) {
+                <a _ngcontent-shc-c20="" routerlink="/cart" class="nav-link ng-star-inserted" href="/cart"><i
+                        _ngcontent-shc-c20="" class="fa-solid fa-cart-shopping fs-3"></i>
+                    <div _ngcontent-shc-c20="" class="badge position-absolute text-white top-0 end-0 ">0</div>
+                </a>
+
+                <li>
+                    <a (click)="logout()" class="px-2 text-gray-500 font-semibold" routerLink="logout"
+                        routerLinkActive="bg-main">Log
+                        Out</a>
+                </li>
+                }
+
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,15 @@
+<div class=" flex flex-wrap w-12/12 p-4 text-center justify-center">
+
+    @for (c of allcategories; track $index) {
+    <div class=" cat-img w-full">
+        <img [src]="c.image" alt="">
+    </div>
+    <span class=" font-medium">
+        {{c.name}}
+
+    </span>
+
+    }@empty {
+    <app-loader></app-loader>
+    }
+</div>

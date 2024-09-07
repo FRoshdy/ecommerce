@@ -1,0 +1,20 @@
+<div class="flex flex-wrap p-4 justify-center items=center h-full mt-5">
+
+    <div class="flex flex-wrap p-4 ng w-3/12 justify-center mt-5">
+        <img class="details w-full" [src]="product.images[0]" routerLink="/details">
+    </div>
+
+    <div class=" product flex flex-wrap w-9/12 p-4 text-center ">
+
+        <h5>{{product.category.name}}</h5>
+        <h4>{{product.description}}</h4>
+        <div class="flex justify-center mx-auto space-between">
+            <span>{{product.price}}</span>
+            <span>{{product.ratingsAverage}}</span>
+            <i class=" fa-solid fa-star rating-color"></i>
+        </div>
+
+        <button class="  bg-main p-3 rounding mt-3 btn"> Add To Cart</button>
+    </div>
+
+</div>

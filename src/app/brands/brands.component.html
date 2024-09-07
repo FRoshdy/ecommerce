@@ -1,0 +1,14 @@
+<h5 class="text-center">All Brands</h5>
+<div class="flex flex-wrap w-10/12 p-4 text-center justify-center">
+
+
+    @for (b of allBrands; track $index) {
+
+    <img class=" b img product block max-w-sm p-6 bg-white   rounded-lg shadow hover:bg-gray-10 dark:bg-gray-20  dark:hover:bg-gray-700"
+        [src]="b.image" alt="">
+    <p class="font-normal text-gray-700 dark:text-gray-400">{{b.name}}</p>
+
+    }@empty {
+    <app-loader></app-loader>
+    }
+</div>

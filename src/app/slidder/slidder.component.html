@@ -1,0 +1,11 @@
+<div class="text-center">Shop Categories</div>
+<owl-carousel-o [options]="customOptions">
+    @for (c of categories; track $index) {
+
+    <ng-template carouselSlide [id]="c._id">
+        <img class="w-full slider-img" [src]="c.image">
+    </ng-template>
+
+    }
+</owl-carousel-o>
+<div>Some tags after</div>
